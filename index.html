@@ -14,6 +14,76 @@
         <h1 class="title">Bingo Hospital Divino Salvador de Sopó</h1>
     </header>
     <main>
+        <button onclick='generar(), mostrarDiv()' class="button">Generar Aleatorio</button>
+        <script>
+            var b=[];
+            var i=[];
+            var n=[];
+            var g=[];
+            var o=[];
+            var estado;
+            var Res;
+            function generar(){
+                var number = Math.floor(Math.random()*75)+1;
+                if (number >=1 && number <=15){
+                    estado = "B";
+                    number = (estado + number);
+                    b.push(number);
+                } 
+                if (number >=16 && number <=30){
+                    estado = "I";
+                    number = (estado + number);
+                    i.push(number);
+                } 
+                if (number >=31 && number <=45){
+                    estado = "N";
+                    number = (estado + number);
+                    n.push(number);
+                } 
+                if (number >=46 && number <=60){
+                    estado = "G";
+                    number = (estado + number);
+                    g.push(number);
+                } 
+                if (number >=61 && number <=75){
+                    estado = "O";
+                    number = (estado + number);;
+                    o.push(number);
+                } 
+                res = number;
+            }
+            
+            function mostrarDiv(){
+                let divB = document.getElementById("divB");
+                divB.innerText = (b)
+                let divI = document.getElementById("divI");
+                divI.innerText = (i)
+                let divN = document.getElementById("divN");
+                divN.innerText = (n)
+                let divG = document.getElementById("divG");
+                divG.innerText = (g)
+                let divO = document.getElementById("divO");
+                divO.innerText = (o)
+                let divR = document.getElementById("divR");
+                divR.innerText = (res)
+                //alert("Hola "+nombre)
+            }
+            function borrar(){
+                b=[];
+                i=[];
+                n=[];
+                g=[];
+                o=[];
+                //alert("Hola "+nombre)
+            }
+        </script>
+        <button onclick='borrar(),mostrarDiv()' class="button">Borrar General</button>       
+        <div id="divB"></div>
+        <div id="divI"></div>
+        <div id="divN"></div>
+        <div id="divG"></div>
+        <div id="divO"></div>
+        <div id="divR"></div>    
     </main>
 </body>
 </html>
