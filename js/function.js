@@ -90,3 +90,68 @@ let b=[];
                 res = 0;
                 //alert("Hola "+nombre)
             }
+
+            function genB(){
+                var number = Math.floor(Math.random()*15)+1;
+                    x = b.some(function(v){
+                    return v === "B"+number;
+                    });
+                    if(x === false){                    
+                        estado = "B";
+                        resN = (estado + number);
+                        b.push(resN);
+                    } else {genB();}
+                    res = resN;
+            }
+
+            function genI(){
+                var number = Math.floor(Math.random()*(31-16)+16);
+                    x = i.some(function(v){
+                    return v === "I"+number;
+                    });
+                    if(x === false){                    
+                        estado = "I";
+                        resN = (estado + number);
+                        i.push(resN);
+                    } else {genI();}
+                    res = resN;
+            }
+
+            function genN(){
+                var number = Math.floor(Math.random()*(46-31)+31);
+                    x = n.some(function(v){
+                    return v === "N"+number;
+                    });
+                    if(x === false){                    
+                        estado = "N";
+                        resN = (estado + number);
+                        n.push(resN);
+                    } else {genN();}
+                    res = resN;
+            }
+
+            function genG(){
+                var number = Math.floor(Math.random()*(61-46)+46);
+                    x = g.some(function(v){
+                    return v === "G"+number;
+                    });
+                    if(x === false){                    
+                        estado = "G";
+                        resN = (estado + number);
+                        g.push(resN);
+                    } else {genG();}
+                    res = resN;
+            }
+
+            function genO(){
+                var number = Math.floor(Math.random()*(76-61)+61);
+                    x = o.some(function(v){
+                    return v === "O"+number;
+                    });
+                    if(x === false){                    
+                        estado = "O";
+                        resN = (estado + number);
+                        o.push(resN);
+                    } else {genO();}
+                    res = resN;
+            }
